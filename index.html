@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+        <title>Booking - An online library for free</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+    
+    <body>
+       <header class="menu-bg">
+          <div class="menu">
+            <div class="menu-logo">
+                <a href="index.html">BooKing</a>
+            </div>
+            
+            <nav class="menu-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#register">Register</a></li>
+                </ul>         
+            </nav>        
+          </div>
+       </header>
+       
+       <section class="intro-bg">
+           <div class="intro">
+               <h1>A catalog made by users</h1>
+               <a class="btn" href="#register">Check it out!</a>
+           </div>
+       </section>
+       
+       <section class="register" id="register">
+           <h2 class="subtitle">Register</h2>
+           <table>
+                <tr>
+                   <td>
+                        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off" class="register-form">
+                            <div>
+                                <label for="title">Title</label>
+                                <label class="validation-error hide" id="ValidationError">*This field is required.</label>
+                                <input type="text" name="title" id="title" />
+                            </div>
+                            <div>
+                                <label for="author">Author</label>
+                                <input type="text" name="author" id="author"/>
+                            </div>
+                            <div>
+                                <label for="publisher">Publisher</label>
+                                <input type="text" name="publisher" id="publisher"/>
+                            </div>
+                            <div>
+                                <label for="date">Date</label>
+                                <input type="text" name="date" id="date"/>
+                            </div>
+                            <div>
+                                <button class="btn btn-black" type="submit" name="enviar" id="enviar">Submit</button>
+                            </div>        
+                        </form>
+                    </td>
+                    <td>
+                        <table class="data-list" id="list">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Author</th>
+                                    <th>Publisher</th>
+                                    <th>Data</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+           </table>
+       </section>
+    <!--    JavaScript   -->
+    <script src="js/script.js"></script>
+    </body>
+</html>

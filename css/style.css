@@ -1,0 +1,248 @@
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+
+/**
+ * Remove anchor tex-decoration
+ */ 
+
+a {
+	text-decoration: none;
+}
+
+/**
+ * Remove list-style
+ */ 
+
+ol, ul {
+	list-style: none;
+}
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, footer, header, nav, section, main {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+/* Estilos Gerais */
+
+body {
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    color: #222222;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.btn {
+    width: 140px;
+    height: 40px;
+    border: 3px solid #fec63e;
+    padding: 10px 30px;
+    color: #fec63e;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 1.25em;
+    letter-spacing: 0.1em;
+    transition: all .4s ease;
+    outline: none;
+}
+
+.btn:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn-black {
+    margin: 0 0 40px 0;
+    background: none;
+    cursor: pointer;
+}
+
+.btn-black:hover {
+    color: #000;
+    border-color: #000;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.8em;
+    letter-spacing: 0.1em;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.subtitle::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #000;
+    margin: 0px auto 60px auto;
+}
+
+.sub-yellow {
+    margin: 0px;
+    color: #fec63e;
+}
+
+.sub-yellow::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #fec63e;
+    margin: 0px auto 60px auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.menu-bg {
+    background: #fec63e;
+}
+
+.menu {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.menu-logo a {
+    font-size: 2.25em;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.menu a {
+    color: #222222;
+    font-weight: bold;
+}
+
+.menu-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-nav a {
+    font-size: 1.25em;
+    display: block;
+    padding: 10px;
+}
+
+.menu-nav a:hover {
+    color: #fff;
+    transition: .4s;
+}
+
+
+/* Introdução */
+
+.intro-bg {
+    width: 100%;
+    height: 460px;
+    background: url(../img/intro-bg.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    padding-top: 120px;
+}
+
+.intro h1 {
+    color: #fff;
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.intro h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #fff;
+    margin: 10px auto 60px auto;
+}
+
+/* Registro */
+
+.register {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.register table {
+    width: 480px;
+    border-collapse: collapse;
+}
+
+.register-form label {
+    display: block;
+    color: #000;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 1.5em;
+    width: 480px;
+    margin: 0 auto 5px 0;
+}
+
+.register-form input {
+    display: block;
+    width: 480px;
+    margin: 0 auto 20px 0px;
+    border: 4px solid #fec63e;
+    background: none;
+    color: #000;
+    padding: 7px 10px;
+    outline: none;
+    font-size: 1em;
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+}
+
+.data-list {
+    width: 480px;
+    margin: -229px 20px 0px 20px;;
+    color: black;
+}
+
+th {
+    background: #fec63e;;
+    margin: 0px;
+    text-align: center;
+    padding: 8px;
+}
+tr:nth-child(even),table.list thead>tr {
+    background-color: #dddddd;
+}
+
+a { 
+    cursor: pointer;
+}
+
+label.validation-error {
+    margin-left: 5px;
+    color: red;
+}
+
+label.hide {
+    display: none;
+}
+
