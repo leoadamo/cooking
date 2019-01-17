@@ -45,10 +45,11 @@ img {
 .btn {
     width: 140px;
     height: 40px;
-    border: 3px solid #fec63e;
+    border: 4px solid #2ecc71;
     padding: 10px 30px;
-    color: #fec63e;
+    color: white;
     text-transform: uppercase;
+    text-align: center;
     font-weight: bold;
     font-size: 1em;
     line-height: 1.25em;
@@ -58,12 +59,14 @@ img {
 }
 
 .btn:hover {
-    color: #fff;
+    color: #2ecc71;
     border-color: #fff;
 }
 
 .btn-black {
-    margin: 0 0 40px 0;
+    color: #2ecc71;
+    padding: 7px 0;
+    margin-bottom: 20px;
     background: none;
     cursor: pointer;
 }
@@ -93,6 +96,7 @@ img {
     margin: 0px auto 60px auto;
 }
 
+/*
 .sub-yellow {
     margin: 0px;
     color: #fec63e;
@@ -106,6 +110,7 @@ img {
     background: #fec63e;
     margin: 0px auto 60px auto;
 }
+*/
 
 * {
     box-sizing: border-box;
@@ -114,7 +119,7 @@ img {
 /* Header */
 
 .menu-bg {
-    background: #fec63e;
+    background: #2ecc71;
 }
 
 .menu {
@@ -127,15 +132,24 @@ img {
     padding: 15px 0;
 }
 
-.menu-logo a {
-    font-size: 2.25em;
-    font-weight: bold;
-    margin: 0 10px;
-}
-
 .menu a {
     color: #222222;
     font-weight: bold;
+}
+
+.menu-logo a {
+    display: block;
+    border: 5px solid black;
+    margin: 0px 10px;
+    padding: 5px 10px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.menu-logo a:hover {
+    color: white;
+    border-color: white;
+    transition: .4s;
 }
 
 .menu-nav ul {
@@ -145,15 +159,16 @@ img {
 
 .menu-nav a {
     font-size: 1.25em;
-    display: block;
-    padding: 10px;
+    display: inline-block;
+    padding: 5px 10px;
+    border-bottom: 4px solid transparent;
 }
 
 .menu-nav a:hover {
     color: #fff;
-    transition: .4s;
+    border-bottom: 4px solid white;
+    transition: border-bottom .1s, color .4s;
 }
-
 
 /* Introdução */
 
@@ -185,13 +200,12 @@ img {
 /* Registro */
 
 .register {
-    max-width: 1024px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
 .register table {
-    width: 480px;
-    border-collapse: collapse;
+    max-width: 960px;
 }
 
 .register-form label {
@@ -200,41 +214,20 @@ img {
     font-weight: bold;
     font-size: 1em;
     line-height: 1.5em;
-    width: 480px;
     margin: 0 auto 5px 0;
 }
 
 .register-form input {
     display: block;
-    width: 480px;
-    margin: 0 auto 20px 0px;
-    border: 4px solid #fec63e;
+    width: 960px;
+    margin-bottom: 20px;
+    border: 4px solid #2ecc71;
     background: none;
     color: #000;
     padding: 7px 10px;
     outline: none;
     font-size: 1em;
     font-family: "Nunito", Helvetica, Arial, sans-serif;
-}
-
-.data-list {
-    width: 480px;
-    margin: -229px 20px 0px 20px;;
-    color: black;
-}
-
-th {
-    background: #fec63e;;
-    margin: 0px;
-    text-align: center;
-    padding: 8px;
-}
-tr:nth-child(even),table.list thead>tr {
-    background-color: #dddddd;
-}
-
-a { 
-    cursor: pointer;
 }
 
 label.validation-error {
