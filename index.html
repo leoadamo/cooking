@@ -13,7 +13,7 @@
        <header class="menu-bg">
           <div class="menu">
             <div class="menu-logo">
-                <a href="index.html">BooKing</a>
+                <a class="logo" href="index.html">BooKing</a>
             </div>
             
             <nav class="menu-nav">
@@ -36,34 +36,44 @@
        
        <section class="register" id="register">
            <h2 class="subtitle">Register</h2>
-           <table>
-                <tr>
-                   <td>
-                        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off" class="register-form">
-                            <div>
-                                <label for="title">Title</label>
-                                <label class="validation-error hide" id="ValidationError">*This field is required.</label>
+           <form action="" autocomplete="off" class="register-form">
+               <div>
+                   <label for="title">Title</label>
+                   <label class="validation-error hide" id="ValidationError">*This field</label>
                                 <input type="text" name="title" id="title" />
-                            </div>
-                            <div>
-                                <label for="author">Author</label>
-                                <input type="text" name="author" id="author"/>
-                            </div>
-                            <div>
-                                <label for="publisher">Publisher</label>
-                                <input type="text" name="publisher" id="publisher"/>
-                            </div>
-                            <div>
-                                <label for="date">Date</label>
-                                <input type="text" name="date" id="date"/>
-                            </div>
-                            <button class="btn btn-black" type="submit" name="enviar" id="enviar">Submit</button>       
-                        </form>
-                    </td>
-                </tr>
+               </div>
+               <div>
+                   <label for="author">Author</label>
+                   <input type="text" name="author" id="author"/>
+               </div>
+               <div>
+                   <label for="publisher">Publisher</label>
+                   <input type="text" name="publisher" id="publisher"/>
+               </div>
+               <div>
+                   <label for="date">Date</label>
+                   <input type="text" name="date" id="date"/>
+               </div>
+               <button class="btn btn-black" type="submit" name="enviar" id="enviar">Submit</button> 
+           </form>
+       </section>
+       <section class="catalog" id="catalog">
+           <h2 class="subtitle sub-green">Catalog</h2>
+           <table class="data">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Data</th>
+                    </tr>     
+                </thead>
+                <tbody>
+                 
+                </tbody>
            </table>
        </section>
     <!--    JavaScript   -->
-    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>
