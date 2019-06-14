@@ -249,7 +249,7 @@ img {
 
 header.bg {
 	width: 100%;
-	height: 630px;
+	height: auto;
 	background: url(../img/intro-bg.jpg) no-repeat top;
 	background-size: cover;
 	text-align: center;
@@ -257,7 +257,8 @@ header.bg {
 }
 
 .intro {
-	margin-top: 70px;
+	margin-top: 100px;
+	padding-bottom: 60px;
 	text-align: left;
 }
 
@@ -285,15 +286,16 @@ header.bg {
 }
 
 .ilustration {
+	background: #FFF;
 	margin-top: 60px;
 	width: 45%;
 	float: right;
+	text-align: right;
 }
 
 .ilustration img {
-	width: 400px;
+	width: 100%;
 	height: auto;
-	margin: 0 auto;
 	border: 5px solid #C9BFBE;
 }
 
