@@ -4,7 +4,7 @@
 
 /**
  * Remove anchor tex-decoration
- */ 
+ */
 
 a {
 	text-decoration: none;
@@ -12,256 +12,190 @@ a {
 
 /**
  * Remove list-style
- */ 
+ */
 
-ol, ul {
+ol,
+ul {
 	list-style: none;
 }
 
-html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, footer, header, nav, section, main {
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+em,
+img,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+article,
+footer,
+header,
+nav,
+section,
+main {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	vertical-align: baseline;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, ul {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul {
 	font-size: 1em;
 	font-weight: normal;
 }
 
 /* Estilos Gerais */
 
-body {
-    font-family: "Nunito", Helvetica, Arial, sans-serif;
-    color: #222222;
+* {
+	box-sizing: border-box;
 }
 
-.table-data {
-    font-family: "Nunito", Helvetica, Arial, sans-serif;
-    color: white;
+body {
+	font-family: "OpenSansCondensed";
 }
 
 img {
-    display: block;
-    max-width: 100%;
+	display: block;
+	max-width: 100%;
 }
 
-.btn {
-    width: 140px;
-    height: 40px;
-    border: 4px solid #2ecc71;
-    padding: 10px 30px;
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1em;
-    line-height: 1.25em;
-    letter-spacing: 0.1em;
-    transition: all .4s ease;
-    outline: none;
+.container {
+	max-width: 80%;
+	margin: 0 auto;
 }
 
-.btn:hover {
-    color: #2ecc71;
-    border-color: #fff;
+.btn-green {
+	display: block;
+	font-family: "OpenSansCondensed-bold";
+	color: #fff;
+	background: #00A155;
+	text-align: center;
+	width: 140px;
+	padding: 10px;
+	margin-top: 20px;
+	letter-spacing: 1px;
+	line-height: 1rem;
+	box-shadow: 2px 2px 5px #1c1c1c;
 }
 
-.btn-black {
-    color: #2ecc71;
-    padding: 7px 0;
-    margin-bottom: 20px;
-    background: none;
-    cursor: pointer;
+.btn-green:hover {
+	background: #DD2A4E;
+	transition: .2s background ease-in;
 }
 
-.btn-black:hover {
-    color: #000;
-    border-color: #000;
+@font-face {
+	font-family: "OpenSansCondensed";
+	src: url("../fonts/OpenSansCondensed-Light.ttf"),
+		url("../fonts/OpenSansCondensed-Light.woff"),
+		url("../fonts/OpenSansCondensed-Light.woff2");
 }
 
-.subtitle {
-    font-size: 1.5em;
-    font-weight: bold;
-    line-height: 1.8em;
-    letter-spacing: 0.1em;
-    color: #000;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 60px 0;
-}
-
-.subtitle::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #000;
-    margin: 0px auto 60px auto;
-}
-
-
-.sub-green {
-    margin: 0px;
-    color: #2ecc71;
-}
-
-.sub-green::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #2ecc71;
-    margin: 0px auto 60px auto;
-}
-
-
-* {
-    box-sizing: border-box;
+@font-face {
+	font-family: "OpenSansCondensed-bold";
+	src: url("../fonts/OpenSansCondensed-Bold.ttf"),
+		url("../fonts/OpenSansCondensed-Bold.woff"),
+		url("../fonts/OpenSansCondensed-Bold.woff2");
 }
 
 /* Header */
 
-.menu-bg {
-    background: #2ecc71;
+.menu-logo {
+	max-width: 300px;
+	margin: 0 auto 20px auto;
 }
 
-.menu {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
+.menu-logo img {
+	width: 80px;
+	height: auto;
+	margin: 0 auto;
 }
 
-.menu a {
-    color: #222222;
-    font-weight: bold;
+.menu-logo h1 {
+	text-align: center;
 }
 
-.menu a.logo {
-    color: white;
-    font-weight: bold;
+.menu-logo h1 img {
+	width: 180px;
+	margin-top: 10px;
 }
 
-.menu-logo a.logo {
-    display: block;
-    border: 5px solid white;
-    margin: 0px 10px;
-    padding: 5px 10px;
-    font-size: 2em;
-    font-weight: bold;
+.nav-bar {
+	width: 100%;
+	height: 60px;
+	margin: 0 auto;
+	border-top: 2px solid rgba(0, 0, 0, .3);
+	border-bottom: 2px solid rgba(0, 0, 0, .3);
 }
 
-.menu-logo a.logo:hover {
-    color: black;
-    border-color: black;
-    transition: all .5s ease;
+.nav-bar ul {
+	display: inline-block;
 }
 
-.menu-nav ul {
-    display: flex;
-    flex-wrap: wrap;
+.nav-bar ul li {
+	float: left;
+	padding: 10px;
+	margin-top: 5px;
+	margin-right: 20px;
 }
 
-.menu-nav a {
-    font-size: 1.25em;
-    display: inline-block;
-    padding: 5px 10px;
-    border-bottom: 4px solid transparent;
+.nav-bar a {
+	color: #1c1c1c;
+	font-family: "OpenSansCondensed-bold";
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 1.2rem;
 }
 
-.menu-nav a:hover {
-    color: #fff;
-    border-bottom: 4px solid white;
-    transition: border-bottom .1s, color .4s;
+.nav-bar a:hover {
+	color: #00A155;
+	transition: .2s all ease-in;
 }
 
-/* Introdução */
+header.bg {
+	width: 100%;
+	height: 620px;
+	background: url(../img/intro-bg.jpg) no-repeat top;
+	background-size: cover;
+	text-align: center;
+	padding-top: 20px;
+}
 
-.intro-bg {
-    width: 100%;
-    height: 460px;
-    background: url(../img/intro-bg.jpg) no-repeat center;
-    background-size: cover;
-    text-align: center;
-    padding-top: 120px;
+.intro {
+	margin-top: 70px;
+	text-align: left;
 }
 
 .intro h1 {
-    color: #fff;
-    font-size: 3em;
-    font-weight: bold;
-    text-transform: uppercase;
+	font-family: "OpenSansCondensed-bold";
+	font-size: 2.5rem;
+	color: #1c1c1c;
+	max-width: 500px;
 }
 
-.intro h1::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #fff;
-    margin: 10px auto 60px auto;
-}
-
-/* Registro */
-
-.register {
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-.register table {
-    max-width: 960px;
-}
-
-.register-form label {
-    display: block;
-    color: #000;
-    font-weight: bold;
-    font-size: 1em;
-    line-height: 1.5em;
-    margin: 0 auto 5px 0;
-}
-
-.register-form input {
-    display: block;
-    width: 960px;
-    margin-bottom: 20px;
-    border: 4px solid #2ecc71;
-    background: none;
-    color: #000;
-    padding: 7px 10px;
-    outline: none;
-    font-size: 1em;
-    font-family: "Nunito", Helvetica, Arial, sans-serif;
-}
-
-label.validation-error {
-    margin-left: 5px;
-    color: red;
-}
-
-label.hide {
-    display: none;
-}
-
-/* Catalog */
-
-.catalog {
-    height: 740px;
-    background: black;
-    padding: 60px calc((100% - 960px) / 2);
-    margin-top: 40px;
-    text-align: center;
-}
-
-.data {
-    width: 100%;
-    border-bottom: 4px solid white;
-    color: white;
-    padding: 10px 0;
-}
+/* Fim do Header */
