@@ -87,15 +87,27 @@ img {
 
 .container {
 	max-width: 80%;
+	height: auto;
 	margin: 0 auto;
 }
 
-.btn-green {
+.clearfix::before,
+.clearfix::after {
+	content: ' ';
+	display: table;
+}
+
+.clearfix::after {
+	clear: both;
+}
+
+.btn {
 	display: block;
 	font-family: "OpenSansCondensed-bold";
 	color: #fff;
 	background: #00A155;
 	text-align: center;
+	text-transform: uppercase;
 	width: 140px;
 	padding: 10px;
 	margin-top: 20px;
@@ -104,9 +116,67 @@ img {
 	box-shadow: 2px 2px 5px #1c1c1c;
 }
 
-.btn-green:hover {
+.btn:hover {
 	background: #DD2A4E;
 	transition: .2s background ease-in;
+}
+
+.btn-yellow {
+	margin-top: 30px;
+	box-shadow: none;
+	color: #FBC24F;
+	background: none;
+	border: 4px solid #FBC24F;
+	text-transform: uppercase;
+}
+
+.btn-yellow:hover {
+	border-color: #FFF;
+	background: none;
+	color: #FFF;
+	transition: .2s all ease-in;
+}
+
+.title {
+	max-width: 200px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: "OpenSansCondensed-bold";
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #C9BFBE;
+}
+
+.title::before,
+.title::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 5px;
+	background: #C9BFBE;
+	margin: 4px auto;
+}
+
+.secondary-title {
+	max-width: 205px;
+	margin-bottom: 20px;
+	text-align: left;
+	font-family: "OpenSansCondensed-bold";
+	color: #00A155;
+	font-size: 1.7rem;
+	letter-spacing: 1px;
+	background: url(../img/icon/money.png) no-repeat right;
+	background-size: 32px;
+}
+
+.text {
+	color: snow;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
 }
 
 @font-face {
@@ -179,7 +249,7 @@ img {
 
 header.bg {
 	width: 100%;
-	height: 620px;
+	height: 630px;
 	background: url(../img/intro-bg.jpg) no-repeat top;
 	background-size: cover;
 	text-align: center;
@@ -199,3 +269,32 @@ header.bg {
 }
 
 /* Fim do Header */
+
+/* Sobre */
+
+.about {
+	background: #76101E;
+	padding: 60px 0;
+	width: 100%;
+}
+
+.content {
+	margin-top: 60px;
+	width: 45%;
+	float: left;
+}
+
+.ilustration {
+	margin-top: 60px;
+	width: 45%;
+	float: right;
+}
+
+.ilustration img {
+	width: 400px;
+	height: auto;
+	margin: 0 auto;
+	border: 5px solid #C9BFBE;
+}
+
+/* Fim do Sobre */
