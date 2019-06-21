@@ -236,6 +236,8 @@ img {
 		url("../fonts/OpenSansCondensed-Bold.woff2");
 }
 
+/* Fim dos estilos gerais */
+
 /* Header */
 
 .menu-logo {
@@ -267,11 +269,13 @@ img {
 }
 
 .nav-bar ul {
-	display: inline-block;
+	margin: 0;
+	padding: 0;
+	text-align: center;
 }
 
 .nav-bar ul li {
-	float: left;
+	display: inline-block;
 	padding: 10px;
 	margin-top: 5px;
 	margin-right: 20px;
@@ -283,10 +287,12 @@ img {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 1.2rem;
+	padding: 1rem;
 }
 
 .nav-bar a:hover {
-	color: #00A155;
+	background: #00A155;
+	color: #FFF;
 	transition: .2s all ease-in;
 }
 
@@ -310,6 +316,121 @@ header.bg {
 	font-size: 2.5rem;
 	color: #1c1c1c;
 	max-width: 500px;
+}
+
+label[for="menu-mobile"] {
+	position: absolute;
+	display: none;
+	top: 20px;
+	right: 20px;
+	padding: 5px;
+	background: #1C1C1C;
+	color: #FFF;
+	font-size: 30px;
+	cursor: pointer;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+}
+
+#menu-mobile {
+	display: none;
+}
+
+@media only screen and (min-width: 359px) and (max-width: 767px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	.container {
+		max-width: 100%;
+		padding: 0 20px;
+	}
+
+	.menu-logo img {
+		width: 60px;
+	}
+
+	.menu-logo h1 img {
+		width: 150px;
+	}
+
+	label[for="menu-mobile"] {
+		display: block;
+	}
+
+	.nav-bar {
+		position: absolute;
+		top: 80px;
+		right: -100%;
+		border: none;
+		width: 250px;
+		height: auto;
+	}
+
+	#menu-mobile:checked+.nav-bar {
+		right: 0;
+		transition: .2s all ease-out;
+	}
+
+	.nav-bar ul {
+		padding: 0;
+		text-align: center;
+		background: #1B1B1B;
+	}
+
+	.nav-bar ul li {
+		display: block;
+		width: 100%;
+		margin-top: 0;
+		padding: 10px;
+		color: #FFF;
+		border-bottom: 1px solid #FFF;
+	}
+
+	.nav-bar ul li:hover {
+		background: #00A155;
+	}
+
+	.nav-bar ul li a {
+		color: #FFF;
+		font-size: 1rem;
+		padding: 0;
+	}
+
+	.nav-bar ul li a:hover {
+		background: none;
+	}
+
+	header.bg {
+		height: 100vh;
+	}
+
+	.intro {
+		width: 100%;
+		margin-top: 0;
+		text-align: center;
+	}
+
+	.intro h1 {
+		max-width: 85%;
+		margin: 100px auto 0 auto;
+		font-size: 2rem;
+	}
+
+	.intro h1:before,
+	.intro h1:after {
+		content: '';
+		display: block;
+		width: 70px;
+		height: 4px;
+		background: #1B1B1B;
+		margin: 10px auto;
+	}
+
+	.intro .btn {
+		margin: 60px auto;
+	}
 }
 
 /* Fim do Header */
@@ -383,6 +504,14 @@ header.bg {
 	width: 200px;
 	height: 40px;
 	text-align: center;
+}
+
+/* Definição provisória */
+
+@media only screen and (min-width: 359px) and (max-width: 767px) {
+	.grid h3 {
+		width: 50px;
+	}
 }
 
 .grid p {
@@ -477,6 +606,14 @@ header.bg {
 	text-align: center;
 	margin: 20px auto 0 auto;
 	width: 400px;
+}
+
+/* Definição provisória */
+
+@media only screen and (min-width: 359px) and (max-width: 767px) {
+	.contact-icon p {
+		width: 100px;
+	}
 }
 
 .contact-icon p:before {
