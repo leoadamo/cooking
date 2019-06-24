@@ -614,7 +614,7 @@ footer h4:after {
 
 	/* Estilos Gerais Mobile */
 	body {
-		overflow: hidden;
+		overflow-x: hidden;
 	}
 
 	.container {
@@ -648,6 +648,7 @@ footer h4:after {
 		border: none;
 		width: 250px;
 		height: auto;
+		overflow-x: hidden;
 	}
 
 	#menu-mobile:checked+.nav-bar {
