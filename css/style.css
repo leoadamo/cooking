@@ -614,7 +614,7 @@ footer h4:after {
 
 	/* Estilos Gerais Mobile */
 	body {
-		overflow-x: hidden;
+		overflow: hidden;
 	}
 
 	.container {
