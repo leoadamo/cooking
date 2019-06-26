@@ -644,15 +644,15 @@ footer h4:after {
 	.nav-bar {
 		position: absolute;
 		top: 80px;
-		right: -100%;
+		transform: translateX(1000px);
 		border: none;
 		width: 250px;
 		height: auto;
 	}
 
 	#menu-mobile:checked+.nav-bar {
-		right: 0;
-		transition: .2s all ease-out;
+		transform: translateX(calc(100vw - 290px));
+		transition: .2s all cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
 
 	.nav-bar ul {

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const internalLinks = document.querySelectorAll('.nav-bar a[href^="#"]');
+  const internalLinks = document.querySelectorAll('body a[href^="#"]');
 
   internalLinks.forEach(item => {
     item.addEventListener('click', scrollToId);
