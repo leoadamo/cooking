@@ -1,0 +1,92 @@
+body.bg {
+    width: 100%;
+	height: auto;
+	background: url(../img/intro-bg.jpg) no-repeat top;
+	background-size: cover;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.title {
+	max-width: 200px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: "OpenSansCondensed-bold";
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #1C1C1C;
+}
+
+.title::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 5px;
+	background: #1C1C1C;
+	margin: 4px auto;
+}
+.title::before {
+    background: none;
+}
+
+.form-content {
+	width: 30%;
+    margin-top: 60px;
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+}
+
+.form-content label,
+.form-content input,
+.form-content textarea {
+	display: block;
+}
+
+.form-content label {
+	margin-bottom: 8px;
+	color: #1C1C1C;
+	font-weight: bold;
+	letter-spacing: 1px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.form-content input {
+	border: 3px solid #DD2A4E;
+	border-radius: 3px;
+	font-family: "OpenSans-regular";
+	color: #1C1C1C;
+	padding: 8px;
+	margin-bottom: 15px;
+	width: 100%;
+	background: none;
+    outline: none;
+}
+
+.clique {
+    margin-top: 15px;
+	text-align: left;
+	letter-spacing: 1px;
+	color: #1C1C1C;
+	font-family: "OpenSansCondensed-bold";
+	font-size: 1rem;
+}
+
+.copy {
+	background: #1C1C1C;
+	padding: 5px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: #FFF;
+	font-family: "OpenSansCondensed-bold";
+    font-size: .9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.form-content .btn {
+    margin-left: 0;
+}

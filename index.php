@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+<?php 
+  include("php/conecta.php");
+  session_start();
+?> 
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no" />
@@ -12,7 +17,7 @@
 <body>
   <header class="bg">
     <div class="menu-logo">
-      <a href="index.html">
+      <a href="index.php">
         <img src="img/logo.png" alt="Tomato Logo">
         <h1><img src="img/tomato.png" alt=""></h1>
       </a>
@@ -24,11 +29,11 @@
 
       <nav class="nav-bar">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li><a href="#about-us">Sobre Nós</a></li>
           <li><a href="#prod">Produtos</a></li>
           <li><a href="#contact">Contato</a></li>
-          <li><a href="">Login</a></li>
+          <li><a id=login href="login.php">Login</a></li>
         </ul>
       </nav>
 
@@ -71,7 +76,7 @@
       <h1 class="title red">Produtos</h1>
 
       <div class="presentation">
-        <h2 class="tertiary-title">O tipo de produtos que oferecemos para você</h2>
+        <h2 class="tertiary-title">Conheça o tipo de produtos que oferecemos para você</h2>
         <p>Nossa preocupação é oferecer a você uma alimentação saudável.</p>
       </div>
 
@@ -79,42 +84,60 @@
         <img src="img/cacau-nutty.png" alt="Cacau Nutty">
         <h3>Cacau Nutty - 210g Bioporã</h3>
         <p>R$ 22,90</p>
-        <a href="#" class="btn-buy">Comprar</a>
+        <div class="text-field">
+          <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
+        </div>
+        <a href="#" class="btn-buy"><span></span></a>
       </div>
 
       <div class="grid">
         <img src="img/snack-alga.png" alt="Snack Alga">
         <h3>Snack Alga - 5g Sea's Gift</h3>
         <p>R$ 4,90</p>
-        <a href="#" class="btn-buy">Comprar</a>
+        <div class="text-field">
+          <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
+        </div>
+        <a href="#" class="btn-buy"><span></span></a>
       </div>
 
       <div class="grid">
         <img src="img/feijao-organico.png" alt="Espaguete de Feijão Orgânico">
         <h3>Espaguete de Feijão Orgânico - 200g Fit Food</h3>
         <p>R$ 19,90</p>
-        <a href="#" class="btn-buy">Comprar</a>
+        <div class="text-field">
+          <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
+        </div>
+        <a href="#" class="btn-buy"><span></span></a>
       </div>
 
       <div class="grid">
         <img src="img/hamburguer-soja.png" alt="Hamburguer de Soja">
         <h3>Hamburguer de Soja Sabor Carne Branca 110g - Sora</h3>
         <p>R$ 22,90</p>
-        <a href="#" class="btn-buy">Comprar</a>
+        <div class="text-field">
+          <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
+        </div>
+        <a href="#" class="btn-buy"><span></span></a>
       </div>
 
       <div class="grid">
         <img src="img/queijo-vegano.png" alt="Queijo Vegano Minas Padrão">
         <h3>Queijo Vegano de Castanha de Cajú 250g - Vida Veg</h3>
         <p>R$ 14,90</p>
-        <a href="#" class="btn-buy">Comprar</a>
+        <div class="text-field">
+          <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
+        </div>
+        <a href="#" class="btn-buy"><span></span></a>
       </div>
 
       <div class="grid">
         <img src="img/refrigerante-natural.png" alt="Refrigerante Natural">
         <h3>Refrigerante Natural - 269ml Gloops</h3>
         <p>R$ 4,90</p>
-        <a href="#" class="btn-buy">Comprar</a>
+        <div class="text-field">
+          <span>Qtde.</span><input class="quantity-input" type="number" value="1">
+        </div>
+        <a href="#" class="btn-buy"><span></span></a>
       </div>
     </div>
   </section>
@@ -125,7 +148,7 @@
 
       <div class="contact-icon">
         <img src="img/icon/support.png" alt="Support Icon">
-        <p>Preencha o formulário ao lado e retornaremos para você o mais breve possível.</p>
+        <p>Preencha o formulário de contato que retornamos para você o mais breve possível.</p>
       </div>
 
       <div class="form-content">

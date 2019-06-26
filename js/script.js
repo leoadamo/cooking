@@ -1,25 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const internalLinks = document.querySelectorAll('body a[href^="#"]');
 
-  internalLinks.forEach(item => {
-    item.addEventListener('click', scrollToId);
-  })
+  scrollSuaveInterno();
 
-  function scrollToId(event) {
-    event.preventDefault();
-    const section = getOffsetTop(event.target);
-    scrollToPosition(section);
-  }
+  function scrollSuaveInterno() {
+    const internalLinks = document.querySelectorAll('body a[href^="#"]');
 
-  function getOffsetTop(element) {
-    const id = element.getAttribute('href');
-    return document.querySelector(id).offsetTop + 40;
-  }
+    internalLinks.forEach(item => {
+      item.addEventListener('click', scrollToId);
+    })
 
-  function scrollToPosition(section) {
-    window.scroll({
-      top: section,
-      behavior: 'smooth',
-    });
+    function scrollToId(event) {
+      event.preventDefault();
+      const section = getOffsetTop(event.target);
+      scrollToPosition(section);
+    }
+
+    function getOffsetTop(element) {
+      const id = element.getAttribute('href');
+      return document.querySelector(id).offsetTop + 40;
+    }
+
+    function scrollToPosition(section) {
+      window.scroll({
+        top: section,
+        behavior: 'smooth',
+      });
+    }
   }
 });

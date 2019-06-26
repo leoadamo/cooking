@@ -142,13 +142,18 @@ img {
 .btn-buy {
 	display: block;
 	background: #00A155;
-	width: 100px;
+	width: 80px;
+	height: auto;
 	margin: 10px auto 0 auto;
-	padding: 3px;
+	padding: 4px;
 	border-radius: 3px;
 	color: #FFF;
-	font-size: .9rem;
 	letter-spacing: 1px;
+}
+
+.btn-buy span::after {
+	display: inline;
+	content: url(../img/icon/shopping-cart.png);
 }
 
 .btn-buy:hover {
@@ -410,9 +415,31 @@ label[for="menu-mobile"] {
 }
 
 .grid p {
+	margin-bottom: 8px;
 	font-size: .9rem;
 	font-weight: bold;
 	color: #1C1C1C;
+}
+
+.grid .text-field {
+	width: 100%;
+}
+
+.grid .text-field span {
+	margin-right: 5px;
+	font-size: .9rem;
+	font-weight: bold;
+	color: #1C1C1C;
+	text-transform: lowercase;
+}
+
+.grid .quantity-input {
+	width: 20%;
+	margin: 0 auto;
+	border: none;
+	border-left: 2px solid #76101E;
+	text-align: center;
+	font-family: "OpenSans-regular";
 }
 
 /* Fim dos Produtos */
