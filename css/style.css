@@ -78,6 +78,7 @@ ul {
 
 body {
 	font-family: "OpenSans-regular";
+	overflow-x: hidden;
 }
 
 img {
@@ -641,15 +642,18 @@ footer h4:after {
 	.nav-bar {
 		position: absolute;
 		top: 80px;
-		transform: translateX(1000px);
+		right: 20px;
 		border: none;
 		width: 250px;
 		height: auto;
+		opacity: 0;
+		visibility: hidden;
 	}
 
 	#menu-mobile:checked+.nav-bar {
-		transform: translateX(calc(100vw - 290px));
-		transition: .2s all cubic-bezier(0.075, 0.82, 0.165, 1);
+		opacity: 1;
+		visibility: visible;
+		transition: opacity .5s;
 	}
 
 	.nav-bar ul {
@@ -806,10 +810,6 @@ footer h4:after {
 	}
 
 	/* Fim do Footer para Mobile */
-
-	body {
-		overflow-x: hidden;
-	}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
