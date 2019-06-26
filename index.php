@@ -38,7 +38,7 @@
       </nav>
 
       <div class="intro">
-        <h1>Encontre diversos produtos orgânicos para você cuidar do seu bem estar.</h1>
+        <h1>Encontre diversos produtos orgânicos para você cuidar do seu bem estar</h1>
         <a href="#prod" class="btn">Confira</a>
       </div>
     </div>
