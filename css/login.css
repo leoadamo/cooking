@@ -1,5 +1,10 @@
+body {
+	width: 100%;
+	height: auto;
+}
+
 body.bg {
-    width: 100%;
+	width: 100%;
 	height: auto;
 	background: url(../img/intro-bg.jpg) no-repeat top;
 	background-size: cover;
@@ -9,7 +14,7 @@ body.bg {
 
 .title {
 	max-width: 200px;
-	margin: 0 auto;
+	margin: 0 auto 20px auto;
 	text-align: center;
 	font-family: "OpenSansCondensed-bold";
 	font-size: 2rem;
@@ -26,16 +31,17 @@ body.bg {
 	background: #1C1C1C;
 	margin: 4px auto;
 }
+
 .title::before {
-    background: none;
+	display: none;
 }
 
 .form-content {
 	width: 30%;
-    margin-top: 60px;
-    text-align: center;
-    margin: 0 auto;
-    float: none;
+	margin-top: 60px;
+	text-align: center;
+	margin: 0 auto;
+	float: none;
 }
 
 .form-content label,
@@ -49,12 +55,12 @@ body.bg {
 	color: #1C1C1C;
 	font-weight: bold;
 	letter-spacing: 1px;
-    line-height: 24px;
-    text-align: left;
+	line-height: 24px;
+	text-align: left;
 }
 
 .form-content input {
-	border: 3px solid #DD2A4E;
+	border: 3px solid #1C1C1C;
 	border-radius: 3px;
 	font-family: "OpenSans-regular";
 	color: #1C1C1C;
@@ -62,12 +68,17 @@ body.bg {
 	margin-bottom: 15px;
 	width: 100%;
 	background: none;
-    outline: none;
+	outline: none;
+}
+
+.form-content .btn {
+	margin: 0 auto 40px auto;
 }
 
 .clique {
-    margin-top: 15px;
-	text-align: left;
+	margin-top: 15px;
+	margin-bottom: 30px;
+	text-align: center;
 	letter-spacing: 1px;
 	color: #1C1C1C;
 	font-family: "OpenSansCondensed-bold";
@@ -81,12 +92,6 @@ body.bg {
 	letter-spacing: 1px;
 	color: #FFF;
 	font-family: "OpenSansCondensed-bold";
-    font-size: .9rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.form-content .btn {
-    margin-left: 0;
+	font-size: .9rem;
+	width: 100%;
 }

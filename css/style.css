@@ -105,6 +105,7 @@ img {
 .btn {
 	display: block;
 	font-family: "OpenSansCondensed-bold";
+	font-size: 1rem;
 	color: #fff;
 	background: #00A155;
 	text-align: center;
@@ -220,6 +221,80 @@ img {
 	margin-bottom: 20px;
 	letter-spacing: 1px;
 }
+
+/* Modal */
+
+@keyframes modal {
+	from {
+		opacity: 0;
+		transform: translate3d(-60px, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.modal-container {
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, .5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 3000;
+	display: none;
+}
+
+.modal-container.modal-open {
+	display: flex;
+}
+
+.modal-close {
+	position: absolute;
+	top: -30px;
+	right: -30px;
+	border: none;
+	cursor: pointer;
+	background: #DD2A4E;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .5);
+	color: #FFF;
+	font-size: 1.2rem;
+}
+
+.modal-content {
+	background: #FFF;
+	border: 10px solid #00A155;
+	box-shadow: 0 0 0 10px #FFF;
+	padding: 40px;
+	color: #1C1C1C;
+	font-size: 1.2rem;
+	position: relative;
+	width: 40%;
+	height: auto;
+	text-align: center;
+}
+
+.modal-open .modal-content {
+	animation: modal .3s;
+}
+
+.modal-content span {
+	color: #DD2A4E;
+	font-weight: bold;
+	display: block;
+	font-size: 1.5rem;
+	line-height: 32px;
+}
+
+/* Fim do Modal */
 
 @font-face {
 	font-family: "OpenSans-regular";
@@ -475,6 +550,7 @@ label[for="menu-mobile"] {
 	border: 3px solid #C9BFBE;
 	border-radius: 3px;
 	font-family: "OpenSans-regular";
+	font-size: 1rem;
 	color: #C9BFBE;
 	padding: 8px;
 	margin-bottom: 15px;
@@ -487,6 +563,7 @@ label[for="menu-mobile"] {
 	border: 3px solid #C9BFBE;
 	border-radius: 3px;
 	font-family: "OpenSans-regular";
+	font-size: 1rem;
 	color: #C9BFBE;
 	padding: 8px;
 	margin-bottom: 15px;
@@ -498,11 +575,11 @@ label[for="menu-mobile"] {
 .form-content .btn {
 	margin-left: calc(80% - 140px);
 	border-radius: 3px;
-	background: #DD2A4E;
+	background: #00A155;
 }
 
 .form-content .btn:hover {
-	background: #00A155;
+	background: #DD2A4E;
 	transition: .2s all ease-in;
 	cursor: pointer;
 }

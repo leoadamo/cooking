@@ -22,7 +22,7 @@
 
   <div class="form-content">
     <h1 class="title">Login</h1>
-    <form action="php/log.php" method="post">
+    <form action="php/sign-in.php" method="post">
       <label for="usuario">Usuário:</label><input type="text" name="usuario" id="usuario">
       <label for="senha">Senha:</label><input type="password" name="senha" id="senha">
       <button class="btn" name="login" value="ok">Enviar</button>

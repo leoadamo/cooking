@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <?php
-  include ("php/conecta.php");
+  include ("php/db-conector.php");
 ?>
 
 <head>
@@ -25,8 +25,8 @@
   </header>
 
   <div class="form-content">
-    <h1 class="title">Login</h1>
-    <form action="php/cad.php" method="post">
+    <h1 class="title">Cadastre-se</h1>
+    <form action="php/sign-up.php" method="post">
       <label for="nome">Nome:</label><input type="text" name="nome" id="nome">
       <label for="usuario">Usuário:</label><input type="text" name="usuario" id="usuario">
       <label for="senha">Senha:</label><input type="password" name="senha" id="senha">
