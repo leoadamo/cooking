@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no" />
-  <title>Cooking - An online catalog for vegans</title>
+  <title>Cooking - Login</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/login.css" />
   <link rel="shortcut icon" href="favicon.ico" />
@@ -22,12 +22,12 @@
 
   <div class="form-content">
     <h1 class="title">Login</h1>
-    <form action="php/log.php" method="post">
+    <form action="" method="POST">
       <label for="usuario">Usuário:</label><input type="text" name="usuario" id="usuario">
       <label for="senha">Senha:</label><input type="password" name="senha" id="senha">
       <button class="btn" name="login" value="ok">Enviar</button>
       <p class="clique">Ainda não tem cadastro no Cooking? <a href="cadastro.php">Clique aqui!</a></p>
-    </form>
+    </form> 
   </div>
 
   <div class="copy">
@@ -36,6 +36,18 @@
     </div>
   </div>
 
+  <?php
+    include ("php/sign-in.php");
+    if(isset($_REQUEST['login'])) {
+      if($_REQUEST['login'] == 'ok') {
+        if($_SESSION['usuario'] != $usuario) {
+          echo $html;
+          echo $script;
+        }
+      }
+    }
+  ?>
+  
 </body>
 
 </html>

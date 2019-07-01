@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <?php 
-  include("php/conecta.php");
+  include ("php/db-conector.php");
   session_start();
 ?> 
 
@@ -152,13 +152,12 @@
       </div>
 
       <div class="form-content">
-        <form action="">
+        <form id="contact-form" method="POST">
           <label for="nome">Nome:</label><input type="text" name="nome" id="nome" required>
           <label for="sobrenome">Sobrenome:</label><input type="text" name="sobrenome" id="sobrenome" required>
           <label for="email">E-mail:</label><input type="text" name="email" id="email" required>
-          <label for="mensagem">Mensagem:</label> <textarea name="mensagem" id="mensagem" cols="30" rows="10"
-            required></textarea>
-          <button class="btn">Enviar</button>
+          <label for="mensagem">Mensagem:</label> <textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea>
+          <button type="submit" class="btn">Enviar</button>
         </form>
       </div>
 
@@ -185,7 +184,7 @@
       <div class="minimap">
         <h4>Navegação</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li><a href="#about-us">Sobre</a></li>
           <li><a href="#prod">Produtos</a></li>
           <li><a href="#contact">Contato</a></li>
@@ -209,8 +208,19 @@
     </div>
   </div>
 
+  <!-- Modal Contato -->
+  <div id=contato-modal class="modal-container">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <p><span>Obrigado</span> por entrar em contato, retornaremos em seguida.</p>
+    </div>
+  </div>
+  <!-- Fim Modal Contato -->
+
   <!-- JavaScript here -->
-  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/serialize.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
