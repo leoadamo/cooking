@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <?php 
-  include("php/db-conector.php");
+  include ("php/db-conector.php");
   session_start();
 ?> 
 
@@ -219,8 +219,8 @@
 
   <!-- JavaScript here -->
   <script type="text/javascript" src="js/serialize.js"></script>
-  <script type="text/javascript" src="js/functions.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
