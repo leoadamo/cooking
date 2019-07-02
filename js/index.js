@@ -2,6 +2,14 @@ const form = document.getElementById('contact-form');
 const internalLinks = document.querySelectorAll('body a[href^="#"]');
 const xhr = new XMLHttpRequest();
 
+function insereProduto() {
+  const btn = document.getElementById('insert');
+
+  btn.addEventListener('click', () => {
+    abreModal('produto-modal');
+  });
+}
+
 function enviaMensagem() {
   form.addEventListener('submit', function (e) {
     e.preventDefault();

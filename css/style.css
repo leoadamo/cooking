@@ -117,6 +117,7 @@ img {
 	line-height: 1rem;
 	box-shadow: 2px 2px 5px #1c1c1c;
 	border: none;
+	cursor: pointer;
 }
 
 .btn:hover {
@@ -282,16 +283,47 @@ img {
 	text-align: center;
 }
 
-.modal-open .modal-content {
-	animation: modal .3s;
-}
-
 .modal-content span {
 	color: #DD2A4E;
 	font-weight: bold;
 	display: block;
 	font-size: 1.5rem;
 	line-height: 32px;
+}
+
+.register {
+	margin: 40px auto 20px auto;
+	width: 90%;
+}
+
+.modal-content .register label {
+	display: block;
+	text-align: left;
+	font-family: "OpenSansCondensed-bold";
+	font-size: 1rem;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+}
+
+.modal-content .register input {
+	display: block;
+	outline: none;
+	border: 3px solid #00A155;
+	border-radius: 3px;
+	width: 100%;
+	padding: 5px 8px;
+	margin-top: 5px;
+	font-family: "OpenSans-regular";
+	font-size: 1rem;
+}
+
+.register .btn {
+	width: 100px;
+	margin-left: calc(100% - 100px);
+}
+
+.modal-open .modal-content {
+	animation: modal .3s;
 }
 
 /* Fim do Modal */
@@ -515,6 +547,38 @@ label[for="menu-mobile"] {
 	border-left: 2px solid #76101E;
 	text-align: center;
 	font-family: "OpenSans-regular";
+}
+
+.new-prod {
+	margin: 0 auto;
+	width: 150px;
+	height: auto;
+	text-align: center;
+}
+
+.btn.add {
+	background: #00A155;
+	display: inline-block;
+	margin: 0 auto;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	box-shadow: none;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.btn.add:hover {
+	background: #1C1C1C;
+	transition: all .4s ease-in-out;
+}
+
+.new-prod span {
+	display: block;
+	margin-top: 5px;
+	font-family: "OpenSansCondensed-bold";
+	color: #1C1C1C;
+	text-transform: uppercase;
 }
 
 /* Fim dos Produtos */

@@ -140,6 +140,10 @@
         <a href="#" class="btn-buy"><span></span></a>
       </div>
     </div>
+
+    <div class="new-prod">
+      <button id="insert" class="btn add">&#43;</button><span>Novo Produto</span>
+    </div>  
   </section>
 
   <section id="contact" class="contact-us">
@@ -216,6 +220,21 @@
     </div>
   </div>
   <!-- Fim Modal Contato -->
+
+  <!-- Modal Produto -->
+  <div id=produto-modal class="modal-container">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h2>Insira os dados do produto:</h2>
+      <form class="register" action="">
+        <label for="description">Descrição: <input type="text" id="description"></label>
+        <label for="category">Categoria: <input type="text" id="category"></label> 
+        <label for="price">Preço: <input type="text" id="price"></label>
+        <button id="register-btn" class="btn">Salvar</button>
+      </form>
+    </div>
+  </div>
+  <!-- Fim Modal Produto -->
 
   <!-- JavaScript here -->
   <script type="text/javascript" src="js/serialize.js"></script>
