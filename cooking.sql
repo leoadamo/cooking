@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 02, 2019 at 05:58 AM
--- Server version: 5.7.17
--- PHP Version: 5.6.30
+-- Host: localhost
+-- Generation Time: 03-Jul-2019 às 14:07
+-- Versão do servidor: 10.1.37-MariaDB
+-- versão do PHP: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,27 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categorias`
---
-
-CREATE TABLE `categorias` (
-  `catcodig` int(11) NOT NULL,
-  `catdescr` varchar(100) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `categorias`
---
-
-INSERT INTO `categorias` (`catcodig`, `catdescr`) VALUES
-(1, 'Higiene'),
-(2, 'Refrigerantes'),
-(3, 'Massas');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `clientes`
+-- Estrutura da tabela `clientes`
 --
 
 CREATE TABLE `clientes` (
@@ -56,16 +36,18 @@ CREATE TABLE `clientes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `clientes`
+-- Extraindo dados da tabela `clientes`
 --
 
 INSERT INTO `clientes` (`clicodig`, `clinome`, `cliemail`, `clisenha`) VALUES
 (3, 'Leonardo', 'Adamoli', '123456');
+INSERT INTO 'clientes' ('clicodig', 'clinome', 'cliemail', 'clisenha') VALUES
+(1, 'Nathalia', 'nathalia', '12345');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contato`
+-- Estrutura da tabela `contato`
 --
 
 CREATE TABLE `contato` (
@@ -77,7 +59,7 @@ CREATE TABLE `contato` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `contato`
+-- Extraindo dados da tabela `contato`
 --
 
 INSERT INTO `contato` (`id`, `nome`, `sobrenome`, `email`, `mensagem`) VALUES
@@ -87,26 +69,31 @@ INSERT INTO `contato` (`id`, `nome`, `sobrenome`, `email`, `mensagem`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `produtos`
+-- Estrutura da tabela `produtos`
 --
 
 CREATE TABLE `produtos` (
   `procodig` int(11) NOT NULL,
   `pronome` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `promarca` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `procateg` int(11) NOT NULL,
-  `propreco` decimal(10,2) NOT NULL
+  `procateg` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `propreco` decimal(10,2) NOT NULL,
+  `proimg` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
+  `proimgdesc` varchar(100) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Extraindo dados da tabela `produtos`
+--
+
+INSERT INTO `produtos` (`procodig`, `pronome`, `promarca`, `procateg`, `propreco`, `proimg`, `proimgdesc`) VALUES
+(1, 'Cacau Nutty 210g', 'Bioporã', 'Pastas', '22.90', 'cacau-nutty.png', 'Cacau Nutty'),
+(3, 'Snack Alga 5g', 'Sea\'s Gift', 'Snacks', '4.90', 'snack-alga.png', 'Snack Alga'),
+(4, 'Espaguete de Feijão Orgânico 200g', 'Fit Food', 'Massas', '19.90', 'feijao-organico.png', 'Espaguete de Feijão Orgânico');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `categorias`
---
-ALTER TABLE `categorias`
-  ADD PRIMARY KEY (`catcodig`);
 
 --
 -- Indexes for table `clientes`
@@ -132,25 +119,23 @@ ALTER TABLE `produtos`
 --
 
 --
--- AUTO_INCREMENT for table `categorias`
---
-ALTER TABLE `categorias`
-  MODIFY `catcodig` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
 -- AUTO_INCREMENT for table `clientes`
 --
 ALTER TABLE `clientes`
   MODIFY `clicodig` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `contato`
 --
 ALTER TABLE `contato`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 --
 -- AUTO_INCREMENT for table `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `procodig` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
+  MODIFY `procodig` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
