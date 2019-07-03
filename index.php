@@ -80,37 +80,44 @@
         <p>Nossa preocupação é oferecer a você uma alimentação saudável.</p>
       </div>
 
-      <div class="grid">
-        <img src="img/cacau-nutty.png" alt="Cacau Nutty">
-        <h3>Cacau Nutty - 210g Bioporã</h3>
-        <p>R$ 22,90</p>
-        <div class="text-field">
-          <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
-        </div>
-        <a href="#" class="btn-buy"><span></span></a>
-      </div>
+      <ul>
+        <li class="grid">
+          <img src="img/cacau-nutty.png" alt="Cacau Nutty">
+          <h3>Cacau Nutty - 210g Bioporã</h3>
+          <p>R$ 22,90</p>
+          <div class="text-field">
+            <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
+          </div>
+          <a href="#" class="btn-buy"><span></span></a>
+        </li>
 
-      <div class="grid">
-        <img src="img/snack-alga.png" alt="Snack Alga">
-        <h3>Snack Alga - 5g Sea's Gift</h3>
-        <p>R$ 4,90</p>
-        <div class="text-field">
-          <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
-        </div>
-        <a href="#" class="btn-buy"><span></span></a>
-      </div>
+        <li class="grid">
+          <img src="img/snack-alga.png" alt="Snack Alga">
+          <h3>Snack Alga - 5g Sea's Gift</h3>
+          <p>R$ 4,90</p>
+          <div class="text-field">
+            <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
+          </div>
+          <a href="#" class="btn-buy"><span></span></a>
+        </li>
 
-      <div class="grid">
-        <img src="img/feijao-organico.png" alt="Espaguete de Feijão Orgânico">
-        <h3>Espaguete de Feijão Orgânico - 200g Fit Food</h3>
-        <p>R$ 19,90</p>
-        <div class="text-field">
-          <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
-        </div>
-        <a href="#" class="btn-buy"><span></span></a>
-      </div>
+        <li class="grid">
+          <img src="img/feijao-organico.png" alt="Espaguete de Feijão Orgânico">
+          <h3>Espaguete de Feijão Orgânico - 200g Fit Food</h3>
+          <p>R$ 19,90</p>
+          <div class="text-field">
+            <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
+          </div>
+          <a href="#" class="btn-buy"><span></span></a>
+        </li>
+      </ul>
+      
 
-      <div class="grid">
+    
+
+    
+
+      <!-- <div class="grid">
         <img src="img/hamburguer-soja.png" alt="Hamburguer de Soja">
         <h3>Hamburguer de Soja Sabor Carne Branca 110g - Sora</h3>
         <p>R$ 22,90</p>
@@ -138,7 +145,7 @@
           <span>Qtde.</span><input class="quantity-input" type="number" value="1">
         </div>
         <a href="#" class="btn-buy"><span></span></a>
-      </div>
+      </div> -->
     </div>
 
     <div class="new-prod">
