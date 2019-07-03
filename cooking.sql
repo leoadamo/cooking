@@ -41,8 +41,6 @@ CREATE TABLE `clientes` (
 
 INSERT INTO `clientes` (`clicodig`, `clinome`, `cliemail`, `clisenha`) VALUES
 (3, 'Leonardo', 'Adamoli', '123456');
-INSERT INTO 'clientes' ('clicodig', 'clinome', 'cliemail', 'clisenha') VALUES
-(1, 'Nathalia', 'nathalia', '12345');
 
 -- --------------------------------------------------------
 
@@ -88,7 +86,7 @@ CREATE TABLE `produtos` (
 
 INSERT INTO `produtos` (`procodig`, `pronome`, `promarca`, `procateg`, `propreco`, `proimg`, `proimgdesc`) VALUES
 (1, 'Cacau Nutty 210g', 'Bioporã', 'Pastas', '22.90', 'cacau-nutty.png', 'Cacau Nutty'),
-(3, 'Snack Alga 5g', 'Sea\'s Gift', 'Snacks', '4.90', 'snack-alga.png', 'Snack Alga'),
+(3, 'Snack Alga 5g', 'Seas Gift', 'Snacks', '4.90', 'snack-alga.png', 'Snack Alga'),
 (4, 'Espaguete de Feijão Orgânico 200g', 'Fit Food', 'Massas', '19.90', 'feijao-organico.png', 'Espaguete de Feijão Orgânico');
 
 --
