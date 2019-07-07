@@ -1,12 +1,38 @@
 const form = document.getElementById('contact-form');
+const formProd = document.getElementById('prodform');
 const internalLinks = document.querySelectorAll('body a[href^="#"]');
 const xhr = new XMLHttpRequest();
 
-function insereProduto() {
+function modalProduto() {
   const btn = document.getElementById('insert');
 
   btn.addEventListener('click', () => {
     abreModal('produto-modal');
+  });
+}
+
+function insereProduto() {
+  formProd.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const prodDados = serialize(formProd);
+
+    xhr.open('POST', '../cooking/php/new-product.php');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.send(prodDados);
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          if (xhr.responseText != 0) {
+            alert('Erro de SQL: ' + xhr.responseText);
+          }
+          formProd.reset();
+        } else {
+          alert('Erro na Requisição: ' + xhr.status + ' ' + xhr.statusText);
+        }
+      }
+    }
   });
 }
 

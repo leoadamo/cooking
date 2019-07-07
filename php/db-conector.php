@@ -15,7 +15,7 @@
   // Utiliza o PDO passando como parâmetros os dados para conexão ao banco
   // Armazena os dados da conexão à variável $pdo, passando também os métodos da POO presentes nessa função
   $pdo = new PDO($dsn, $dbuser, $dbpass);
-  } catch (PDOException $e) {
-  echo "Falhou: ".$e->getMessage();
+  } catch (PDOException $ex) {
+  echo "Falhou: ".$ex->getMessage();
   }
 ?>

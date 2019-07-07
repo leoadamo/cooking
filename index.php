@@ -14,7 +14,7 @@
   <link rel="shortcut icon" href="favicon.ico" />
 </head>
 
-<body>
+<body onload="">
   <header class="bg">
     <div class="menu-logo">
       <a href="index.php">
@@ -81,41 +81,14 @@
       </div>
 
       <ul>
-        <li class="grid">
-          <img src="img/cacau-nutty.png" alt="Cacau Nutty">
-          <h3>Cacau Nutty - 210g Bioporã</h3>
-          <p>R$ 22,90</p>
-          <div class="text-field">
-            <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
-          </div>
-          <a href="#" class="btn-buy"><span></span></a>
-        </li>
+        <?php
+          include('php/produtos.php');
 
-        <li class="grid">
-          <img src="img/snack-alga.png" alt="Snack Alga">
-          <h3>Snack Alga - 5g Sea's Gift</h3>
-          <p>R$ 4,90</p>
-          <div class="text-field">
-            <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
-          </div>
-          <a href="#" class="btn-buy"><span></span></a>
-        </li>
-
-        <li class="grid">
-          <img src="img/feijao-organico.png" alt="Espaguete de Feijão Orgânico">
-          <h3>Espaguete de Feijão Orgânico - 200g Fit Food</h3>
-          <p>R$ 19,90</p>
-          <div class="text-field">
-            <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
-          </div>
-          <a href="#" class="btn-buy"><span></span></a>
-        </li>
+          if($vetor) {
+            listaProdutos($vetor);
+          }
+        ?>
       </ul>
-      
-
-    
-
-    
 
       <!-- <div class="grid">
         <img src="img/hamburguer-soja.png" alt="Hamburguer de Soja">
@@ -233,11 +206,14 @@
     <div class="modal-content">
       <button class="modal-close">&times;</button>
       <h2>Insira os dados do produto:</h2>
-      <form class="register" action="">
-        <label for="description">Descrição: <input type="text" id="description"></label>
-        <label for="category">Categoria: <input type="text" id="category"></label> 
-        <label for="price">Preço: <input type="text" id="price"></label>
-        <button id="register-btn" class="btn">Salvar</button>
+      <form id="prodform" class="register" method="POST">
+        <label for="description">Descrição: <input type="text" id="descricao" name="descricao"></label>
+        <label for="marca">Marca: <input type="text" id="marca" name="marca"></label>
+        <label for="category">Categoria: <input type="text" id="categoria" name="categoria"></label> 
+        <label for="price">Preço: <input type="text" id="preco" name="preco"></label>
+        <label for="imagem">Imagem: <input type="text" id="imagem" name="imagem"></label>
+        <label for="texto-alt">Texto Alternativo: <input type="text" id="texto-alt" name="texto-alt"></label>
+        <button id="register-btn" class="btn" type="submit">Salvar</button>
       </form>
     </div>
   </div>

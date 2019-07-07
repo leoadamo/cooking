@@ -12,7 +12,7 @@
     $query = $pdo->prepare($sql);
     $query->execute();
 
-  } catch (PDOException $th) {
-    echo "Falhou: ".$th->getMessage(); 
+  } catch (PDOException $ex) {
+    echo "Falhou: ".$ex->getMessage(); 
   }
 ?>

@@ -17,14 +17,19 @@
       @$usuario = $_REQUEST['usuario'];
       @$senha = $_REQUEST['senha'];
 
-      $sql = "SELECT * FROM clientes WHERE cliemail = '$usuario' AND clisenha = '$senha'";
-      $query = $pdo->prepare($sql);
-      $query->execute();
-      $vetor = $query->fetchAll();
+      try {
+        $sql = "SELECT * FROM clientes WHERE cliemail = '$usuario' AND clisenha = '$senha'";
 
-      if (count($vetor) > 0) {
-        $_SESSION['usuario'] = $usuario;
-        header ('location:../cooking/index.php');
+        $query = $pdo->prepare($sql);
+        $query->execute();
+        $vetor = $query->fetchAll();
+
+        if (count($vetor) > 0) {
+          $_SESSION['usuario'] = $usuario;
+          header ('location:../cooking/index.php');
+        }
+      } catch (PDOException $ex) {
+        echo($ex->getMessage());
       }
     }
   }
