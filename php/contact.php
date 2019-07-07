@@ -6,9 +6,9 @@
   $email = utf8_decode($_REQUEST['email']);
   $mensagem = utf8_decode($_REQUEST['mensagem']);
 
-  try {
-    $sql = "INSERT INTO contato (nome, sobrenome, email, mensagem) VALUES ('$nome', '$sobrenome', '$email', '$mensagem')";
+  $sql = "INSERT INTO contato (nome, sobrenome, email, mensagem) VALUES ('$nome', '$sobrenome', '$email', '$mensagem')";
 
+  try {
     $query = $pdo->prepare($sql);
     $query->execute();
 

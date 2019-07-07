@@ -8,9 +8,9 @@
   $imagem = $_REQUEST['imagem'];
   $alt = $_REQUEST['texto-alt'];
 
+  $sql = "INSERT INTO produtos (pronome, promarca, procateg, propreco, proimg, proimgdesc) VALUES ('$nome', '$marca', '$categoria', '$preco', '$imagem', '$alt')";
+
   try {
-    $sql = "INSERT INTO produtos (pronome, promarca, procateg, propreco, proimg, proimgdesc) VALUES ('$nome', '$marca', '$categoria', '$preco', '$imagem', '$alt')";
-    
     $query = $pdo->prepare($sql);
     $query->execute();
     

@@ -28,12 +28,75 @@ function insereProduto() {
             alert('Erro de SQL: ' + xhr.responseText);
           }
           formProd.reset();
+          carregaProdutos();
         } else {
           alert('Erro na Requisição: ' + xhr.status + ' ' + xhr.statusText);
         }
       }
     }
   });
+}
+
+function montaLista(dados, alvo) {
+  const ul = document.getElementById(alvo);
+  ul.innerHTML = '';
+
+  const objtJSON = JSON.parse(dados);
+
+  for (let i in objtJSON) {
+    const li = document.createElement("li");
+    const img = document.createElement("img");
+    const h3 = document.createElement("h3");
+    const p = document.createElement("p");
+    const div = document.createElement("div");
+    const span = document.createElement("span");
+    const input = document.createElement("input");
+    const a = document.createElement("a");
+    const anchorSpan = document.createElement("span");
+
+    li.classList.add('grid');
+    img.setAttribute("src", "img/" + objtJSON[i].proimg);
+    img.setAttribute("alt", objtJSON[i].proimgdesc);
+    h3.innerText = objtJSON[i].pronome + ' - ' + objtJSON[i].promarca;
+    p.innerText = "R$" + " " + objtJSON[i].propreco;
+    div.classList.add('text-field');
+    span.innerText = "Qtde.";
+    input.classList.add('quantity-input');
+    input.setAttribute("type", "number");
+    input.setAttribute("rows", 1);
+    input.setAttribute("value", 1);
+    a.classList.add('btn-buy');
+    a.setAttribute("href", "#");
+    anchorSpan.innerHTML = '';
+
+    li.appendChild(img);
+    li.appendChild(h3);
+    li.appendChild(p);
+    li.appendChild(div);
+    div.appendChild(span);
+    div.appendChild(input);
+    li.appendChild(a);
+    a.appendChild(anchorSpan);
+
+    ul.appendChild(li);
+  }
+}
+
+function carregaProdutos() {
+  const request = new XMLHttpRequest();
+
+  request.open('GET', '../cooking/php/produtos.php');
+  request.send();
+
+  request.onreadystatechange = function () {
+    if (request.readyState === 4) {
+      if (request.status === 200) {
+        montaLista(request.responseText, 'prodLista');
+      } else {
+        alert('Erro na Requisição: ' + request.status + ' ' + request.statusText);
+      }
+    }
+  }
 }
 
 function enviaMensagem() {

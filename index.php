@@ -14,7 +14,7 @@
   <link rel="shortcut icon" href="favicon.ico" />
 </head>
 
-<body onload="">
+<body onload='carregaProdutos();'>
   <header class="bg">
     <div class="menu-logo">
       <a href="index.php">
@@ -80,45 +80,10 @@
         <p>Nossa preocupação é oferecer a você uma alimentação saudável.</p>
       </div>
 
-      <ul>
-        <?php
-          include('php/produtos.php');
-
-          if($vetor) {
-            listaProdutos($vetor);
-          }
-        ?>
+      <!-- Lista de Produtos -->
+      <ul id="prodLista">
+     
       </ul>
-
-      <!-- <div class="grid">
-        <img src="img/hamburguer-soja.png" alt="Hamburguer de Soja">
-        <h3>Hamburguer de Soja Sabor Carne Branca 110g - Sora</h3>
-        <p>R$ 22,90</p>
-        <div class="text-field">
-          <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
-        </div>
-        <a href="#" class="btn-buy"><span></span></a>
-      </div>
-
-      <div class="grid">
-        <img src="img/queijo-vegano.png" alt="Queijo Vegano Minas Padrão">
-        <h3>Queijo Vegano de Castanha de Cajú 250g - Vida Veg</h3>
-        <p>R$ 14,90</p>
-        <div class="text-field">
-          <span>Qtde.</span><input class="quantity-input" type="number" rows="1" value="1">
-        </div>
-        <a href="#" class="btn-buy"><span></span></a>
-      </div>
-
-      <div class="grid">
-        <img src="img/refrigerante-natural.png" alt="Refrigerante Natural">
-        <h3>Refrigerante Natural - 269ml Gloops</h3>
-        <p>R$ 4,90</p>
-        <div class="text-field">
-          <span>Qtde.</span><input class="quantity-input" type="number" value="1">
-        </div>
-        <a href="#" class="btn-buy"><span></span></a>
-      </div> -->
     </div>
 
     <div class="new-prod">

@@ -6,9 +6,9 @@
 	$usuario = $_POST['usuario'];
 	$senha = $_POST['senha'];
 
+	$sql = "INSERT INTO clientes (clinome, cliemail, clisenha) VALUES ('$nome', '$usuario', '$senha')";
+
 	try {
-		$sql = "INSERT INTO clientes (clinome, cliemail, clisenha) VALUES ('$nome', '$usuario', '$senha')";
-		
 		$query = $pdo->prepare($sql);
 		$query->execute();
 		header ('location:../login.php');

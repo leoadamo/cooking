@@ -17,9 +17,9 @@
       @$usuario = $_REQUEST['usuario'];
       @$senha = $_REQUEST['senha'];
 
-      try {
-        $sql = "SELECT * FROM clientes WHERE cliemail = '$usuario' AND clisenha = '$senha'";
+      $sql = "SELECT * FROM clientes WHERE cliemail = '$usuario' AND clisenha = '$senha'";
 
+      try {
         $query = $pdo->prepare($sql);
         $query->execute();
         $vetor = $query->fetchAll();
