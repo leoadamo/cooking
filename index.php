@@ -172,12 +172,12 @@
       <button class="modal-close">&times;</button>
       <h2>Insira os dados do produto:</h2>
       <form id="prodform" class="register" method="POST">
-        <label for="description">Descrição: <input type="text" id="descricao" name="descricao"></label>
-        <label for="marca">Marca: <input type="text" id="marca" name="marca"></label>
-        <label for="category">Categoria: <input type="text" id="categoria" name="categoria"></label> 
-        <label for="price">Preço: <input type="text" id="preco" name="preco"></label>
-        <label for="imagem">Imagem: <input type="text" id="imagem" name="imagem"></label>
-        <label for="texto-alt">Texto Alternativo: <input type="text" id="texto-alt" name="texto-alt"></label>
+        <label for="description">Descrição: <input type="text" id="descricao" name="descricao" required></label>
+        <label for="marca">Marca: <input type="text" id="marca" name="marca" required></label>
+        <label for="category">Categoria: <input type="text" id="categoria" name="categoria" required></label> 
+        <label for="price">Preço: <input type="text" id="preco" name="preco" required></label>
+        <label for="imagem">Imagem: <input type="text" id="imagem" name="imagem" required></label>
+        <label for="texto-alt">Texto Alternativo: <input type="text" id="texto-alt" name="texto-alt" required></label>
         <button id="register-btn" class="btn" type="submit">Salvar</button>
       </form>
     </div>
