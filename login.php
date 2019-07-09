@@ -32,7 +32,7 @@
 
   <div class="copy">
     <div class="container">
-      <p>Desenvolvido por Leonardo Adamoli - Todos os direitos Reservados.</p>
+      <p>Desenvolvido por Leonardo Adamoli & Nathália Garcia - Todos os direitos Reservados.</p>
     </div>
   </div>
 

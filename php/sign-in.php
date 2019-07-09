@@ -33,4 +33,9 @@
       }
     }
   }
+
+  if(isset($_REQUEST['logout']) == 'sim') {
+    session_destroy();
+    header ('location:../index.php');
+  }
 ?>

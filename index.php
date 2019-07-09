@@ -27,7 +27,14 @@
       <label for="menu-mobile">&#9776;</label>
       <input type="checkbox" id="menu-mobile">
 
-      <nav class="nav-bar">
+      <?php
+        if (isset($_SESSION['usuario'])){
+          include ("topo_logado.php");
+        } else {
+          include ("topo.php");
+        }
+      ?>
+      <!-- <nav class="nav-bar">
         <ul>
           <li><a href="index.php">Home</a></li>
           <li><a href="#about-us">Sobre Nós</a></li>
@@ -35,7 +42,7 @@
           <li><a href="#contact">Contato</a></li>
           <li><a id=login href="login.php">Login</a></li>
         </ul>
-      </nav>
+      </nav> -->
 
       <div class="intro">
         <h1>Encontre diversos produtos orgânicos para você cuidar do seu bem estar</h1>
@@ -153,7 +160,7 @@
 
   <div class="copy">
     <div class="container">
-      <p>Desenvolvido por Leonardo Adamoli - Todos os direitos Reservados.</p>
+      <p>Desenvolvido por Leonardo Adamoli & Nathália Garcia - Todos os direitos Reservados.</p>
     </div>
   </div>
 
