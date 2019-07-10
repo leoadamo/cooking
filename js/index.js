@@ -66,7 +66,7 @@ function montaLista(dados, alvo) {
     input.setAttribute("rows", 1);
     input.setAttribute("value", 1);
     a.classList.add('btn-buy');
-    a.setAttribute("href", "#");
+    a.setAttribute("id", objtJSON[i].procodig);
     anchorSpan.innerHTML = '';
 
     li.appendChild(img);
@@ -161,3 +161,4 @@ function scrollSuaveInterno() {
     });
   }
 }
+

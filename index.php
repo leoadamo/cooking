@@ -34,15 +34,6 @@
           include ("topo.php");
         }
       ?>
-      <!-- <nav class="nav-bar">
-        <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="#about-us">Sobre Nós</a></li>
-          <li><a href="#prod">Produtos</a></li>
-          <li><a href="#contact">Contato</a></li>
-          <li><a id=login href="login.php">Login</a></li>
-        </ul>
-      </nav> -->
 
       <div class="intro">
         <h1>Encontre diversos produtos orgânicos para você cuidar do seu bem estar</h1>
@@ -92,10 +83,29 @@
      
       </ul>
     </div>
+    
+    <?php
+      if (isset($_SESSION['usuario'])){
+        $html = '<div class="new-prod">
+        <button id="insert" class="btn add">&#43;</button><span>Novo Produto</span>
+      </div>';
+        echo $html;
+      }
+    ?>
+    
+  </section>
 
-    <div class="new-prod">
-      <button id="insert" class="btn add">&#43;</button><span>Novo Produto</span>
-    </div>  
+  <section id="cart" class="cart">
+    <div class="container clearfix">
+      <h1 class="title red">Carrinho</h1>
+      <form id="itens">
+        Código do cliente:<input type="text" size="2" value="1" name="clicodig">
+        <div id="carrinho">
+          
+        </div>
+        <button id="pedir" class="btn">Concluir</button>
+      </form>
+    </div>
   </section>
 
   <section id="contact" class="contact-us">
