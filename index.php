@@ -95,19 +95,6 @@
     
   </section>
 
-  <section id="cart" class="cart">
-    <div class="container clearfix">
-      <h1 class="title red">Carrinho</h1>
-      <form id="itens">
-        Código do cliente:<input type="text" size="2" value="1" name="clicodig">
-        <div id="carrinho">
-          
-        </div>
-        <button id="pedir" class="btn">Concluir</button>
-      </form>
-    </div>
-  </section>
-
   <section id="contact" class="contact-us">
     <div class="container clearfix">
       <h2 class="title">Contato</h2>
